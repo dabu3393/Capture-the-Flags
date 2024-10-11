@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Fri Oct 11 00:59:57 2024 as: nmap -sC -p 22,80 -oA script_scan 10.129.202.159
+Host: 10.129.202.159 ()	Status: Up
+Host: 10.129.202.159 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///
+# Nmap done at Fri Oct 11 01:00:02 2024 -- 1 IP address (1 host up) scanned in 4.70 seconds
