@@ -30,7 +30,7 @@ Upon gaining access to the target, I ran `sudo -l` and discovered that I could r
 ## File Structure
 
 The repository is structured as follows:
-
+```
 ├── scans # All of my enumeration scans
 │  ├── gobuster_scan
 │  ├── initial_scan.gnmap 
@@ -48,6 +48,7 @@ The repository is structured as follows:
 │  ├── reverse_shell.png
 │  ├── test_php_command.png
 ├── notes.txt # Some important commands and outputs
+```
 
 ## Conclusion
 This was a great learning experience that reinforced the importance of proper enumeration and privilege escalation techniques.
